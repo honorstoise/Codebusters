@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C8B930"
+    android:clickable="false"
+    tools:context=".CipherActivity">
+
+    <Button
+        android:id="@+id/button_Menu"
+        android:layout_width="195dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="16dp"
+        android:text="Return to Menu"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Cipher"
+        android:layout_width="363dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_Encode"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="28dp"
+        android:background="#FFFFFF"
+        android:paddingTop="4dp"
+        android:text="Encode"
+        android:textAlignment="center"
+        android:textColor="#00D108"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/switch_Mode"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Cipher" />
+
+    <TextView
+        android:id="@+id/textView_Decode"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="89dp"
+        android:background="#FFFFFF"
+        android:paddingTop="4dp"
+        android:text="Decode"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/switch_Mode"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Cipher" />
+
+    <EditText
+        android:id="@+id/EditText_Input"
+        android:layout_width="364dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        android:gravity="start"
+        android:hint="Enter message here"
+        android:inputType="textMultiLine"
+        android:maxLines="6"
+        android:selectAllOnFocus="true"
+        android:singleLine="false"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_Mode" />
+
+    <EditText
+        android:id="@+id/EditText_Key"
+        android:layout_width="364dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="168dp"
+        android:background="#FFFFFF"
+        android:gravity="start"
+        android:hint="Enter key here if needed"
+        android:inputType="textMultiLine"
+        android:maxLines="6"
+        android:selectAllOnFocus="true"
+        android:singleLine="false"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch_Mode" />
+
+    <Switch
+        android:id="@+id/switch_Mode"
+        android:layout_width="48dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="179dp"
+        android:background="#FFFFFF"
+        android:showText="false"
+        android:splitTrack="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Cipher"
+        tools:checked="false" />
+
+    <ImageButton
+        android:id="@+id/imageButton_Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditText_Key"
+        app:srcCompat="@drawable/submit" />
+
+    <TextView
+        android:id="@+id/textView_Output"
+        android:layout_width="364dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:hint="Output will appear here."
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_Submit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
